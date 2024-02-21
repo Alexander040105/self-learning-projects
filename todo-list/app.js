@@ -8,4 +8,9 @@ addTask.onclick = appendTask;
 function appendTask() {
     var userInput = taskInput.value;
     console.log(userInput);
+    const li = document.createElement('li');
+    const node = document.createTextNode(userInput);
+    li.appendChild(node);
+
+    taskTable.appendChild(li);
 }
