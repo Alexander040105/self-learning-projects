@@ -1,6 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Merriweather:ital,wght@0,300;0,400;0,900;1,400;1,700;1,900&family=Raleway:ital,wght@0,200;0,400;0,500;0,600;0,700;1,300&display=swap');
+
 body{
+    font-family: "Anta", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    font-style: normal;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #260101;
+}
+
+li{
+    font-weight: 400;
+}
+
+button{
+    background-color: #2A8C82;
+    color: #260101;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    height: 3rem;
+    width: 10rem;
+    cursor: pointer;
+    font-family: "Anta", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin-bottom: 2rem;
+}
+
+input{
+    font-size: 1rem;
+    height: 3rem;
+    width: 15rem;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+#contents{
+    width: 35rem;
+    background-color: #9BF2EA;
+    border-radius: 20px;
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
