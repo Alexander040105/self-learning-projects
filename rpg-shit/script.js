@@ -19,6 +19,12 @@ const locations = [
         buttonFunctions: [buyPotion, buySword, goTown],
         text: "You enter the store"
     },
+    {
+        name: "Cave",
+        buttonText: ["Fight Slime", "Fight Beast", "GO TO TOWN SQUARE"],
+        buttonFunctions: [fightSlime, fightBeast, goTown],
+        text: "You enter the cave man. You see the monsters"
+    },
 ];
 
 
@@ -27,15 +33,37 @@ const items = [
         itemName: "Potion",
         buttonText: ["Go to store", "Go to cave", "Fight dragon"],
         buttonFunctions: [goStore, goCave, fightDragon],
-        text: "You just bought a potion. Your inventory now consists of "
+        text: "You just bought a potion. Your inventory now consists of ",
+        price: 10
     },
     {
         itemName: "Iron Sword",
         buttonText: ["Go to store", "Go to cave", "Fight dragon"],
         buttonFunctions: [goStore, goCave, fightDragon],
-        text: "You just bought a sword. Your inventory now consists of "
+        text: "You just bought a sword. Your inventory now consists of ",
+        price: 30,
     },
 ];
+
+const weapons = [
+    {
+        name: "Stick",
+        power: 5
+    },
+    {
+        name: "Iron Sword",
+        power: 100
+    },
+    {
+        name: "Dagger",
+        power: 30
+    },
+    {
+        name: "Claw hammer",
+        power: 50
+    }
+]
+
 
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector('#button2');
@@ -62,7 +90,7 @@ function update(location) {
     button2.onclick = location.buttonFunctions[1];
     button3.onclick = location.buttonFunctions[2];
     text.innerText = location.text;
-}
+};
 
 function buying(item){
     button1.innerText = item.buttonText[0];
@@ -74,30 +102,45 @@ function buying(item){
 
     var itemInventory = item.itemName;
     inventory.push(itemInventory)
+    gold -= item.price
     text.innerText = item.text + "" + inventory;
     console.log(inventory);
-}
+    console.log(gold);
+};
 
 
 
 function goStore() {
     update(locations[1]);
-}
+};
 
 function goTown(){
     update(locations[0]);
-}
+};
 
-function goCave() {}
+function goCave() {
+    update(locations[2]);
+};
 
-function fightDragon() {}
+function fightDragon() {};
 
 function buyPotion() {
-    buying(items[0])
-}
+    if(gold >= 10){
+        buying(items[0])
+    } else{
+        text.innerText = "You don't have enough gold"
+    }
+};
 
 function buySword() {
-    buying(items[1])
-}
+    if(gold >= 30){
+        currentWeapon += 1
+        buying(items[1])
+    } else{
+        text.innerText = "You don't have enough gold"
+    }
+};
 
+function fightSlime(){};
+function fightBeast(){};
 
