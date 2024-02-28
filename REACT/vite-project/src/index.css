@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +65,137 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(19, 19, 19);
+}
+
+.card{
+  border: 1px solid rgba(148, 148, 148, 0.815);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  max-width: 12rem;
+  box-shadow: 10px 10px 10px rgba(46, 46, 46, 0.205);
+  text-align: center;
+  display: inline-block;
+}
+
+.card-image{
+  background-color: #092126;
+  margin-bottom: .5rem;
+  height: auto;
+  max-width: 75%;
+  border-radius: 50%;
+}
+
+.card-title{
+  margin: 0;
+}
+
+.card .card-description{
+  color: rgb(19, 19, 19);
+}
+
+.hakdog{
+  border: 1px solid rgba(148, 148, 148, 0.815);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 10px 10px 10px rgba(46, 46, 46, 0.205);
+  max-width: 10rem;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+}
+
+.hakdog p{
+  margin: 0;
+}
+
+
+
+/* navbar styling */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: linear-gradient(to right, #710B03, #9e1005); */
+}
+
+.brand-title a{
+  text-decoration: none;
+  margin: .5rem;
+  color: var(--green);
+  font-family: var(--merriweather);
+  font-size: var(--large);
+  font-weight: bold;
+}
+
+.brand-title .perpetual{
+  max-width: 280px;
+  max-height: 68px;
+  cursor: pointer;
+}
+
+.navbar-links ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/*Styles of the list*/
+.navbar-links li{
+  list-style: none;
+}
+
+/*Styles of the link*/
+.navbar-links li a{
+  text-decoration: none;
+  color: #092126;
+  padding: 1rem;
+  display: block;
+  cursor: pointer;
+  font-size: var(--small);
+  font-weight: bold;
+  font-style: var(--raleway);
+}
+
+#svg{
+  width: var(--large);
+  height: var(--large);
+}
+
+#socials li a:hover{
+  background-color: var(--beige);
+}
+
+.navbar-links li a:hover{
+  /* background: #FCCF3B;
+  color:#9e1005; */
+  background-color: var(--green);
+  color: var(--beige);
+}
+
+/* 3 bar buttons styling to none */
+.toggle-button {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.toggle-button .bar{
+  height: 3px;
+  width: 100%;
+  background-color: #FCCF3B;
+  border-radius: 10px;
 }

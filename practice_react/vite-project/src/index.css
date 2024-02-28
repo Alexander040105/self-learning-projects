@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,900;1,400;1,700;1,900&family=Raleway:ital,wght@0,200;0,400;0,500;0,600;0,700;1,300&display=swap');
+:root {
+  --beige: #D9B6A3;
+  --green: #092126;
+  --white: #f5f5f5;
+  --red-pink: #96505B;
+  --merriweather: 'Merriweather', serif;
+  --raleway: 'Raleway', sans-serif;
+  --xtra-large: 10rem;
+  --super-large: 5rem;
+  --large: 2rem;
+  --small1: 1.5rem;
+  --small: 1rem;
+  --radius-large: 50px;
+}
+
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: var(--merriweather);
+  background-color: #D9B6A3;
+}
+
+
+
+/* navbar styling */
+header{
+  background-color: #D9B6A3;
+}
+.navbar {
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #D9B6A3; */
+  /* background: linear-gradient(to right, #710B03, #9e1005); */
+}
+
+.brand-title a{
+  text-decoration: none;
+  margin: .5rem;
+  color: var(--green);
+  font-family: var(--merriweather);
+  font-size: var(--large);
+  font-weight: bold;
+}
+
+.brand-title .perpetual{
+  max-width: 280px;
+  max-height: 68px;
+  cursor: pointer;
+}
+
+.navbar-links ul{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/*Styles of the list*/
+.navbar-links li{
+  list-style: none;
+}
+
+/*Styles of the link*/
+.navbar-links li a{
+  text-decoration: none;
+  color: #092126;
+  padding: 1rem;
+  display: block;
+  cursor: pointer;
+  font-size: var(--small);
+  font-weight: bold;
+  font-style: var(--raleway);
+}
+
+#svg{
+  width: var(--large);
+  height: var(--large);
+}
+
+#socials li a:hover{
+  background-color: var(--beige);
+}
+
+.navbar-links li a:hover{
+  /* background: #FCCF3B;
+  color:#9e1005; */
+  background-color: var(--green);
+  color: var(--beige);
+}
+
+/* 3 bar buttons styling to none */
+.toggle-button {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.toggle-button .bar{
+  height: 3px;
+  width: 100%;
+  background-color: #FCCF3B;
+  border-radius: 10px;
+}
+
+.image-placeholder{
+  background-color: #092126;
+  border: 2rem #092126;
+  border-bottom-left-radius: 7rem;
+  width: 30rem;
+  height: 30rem;
+  margin-left: 10rem;
+}
+
+.title{
+  font-size: 2.5rem;
+  width: 15rem;
+}
+
+.description{
+  width: 15rem;
+}
+
+.texts{
+  color: #092126;
+  margin-right: 1.5rem;
+}
+
+.landing-page{
+  background-color: #D9B6A3;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items:flex-start;
+  justify-content: center;
+}
+
+.card{
+  border: 1px solid rgba(148, 148, 148, 0.815);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  max-width: 12rem;
+  box-shadow: 10px 10px 10px rgba(46, 46, 46, 0.205);
+  text-align: center;
+  display:inline-block;
+  background-color: #f5f5f5;
+}
+
+.card-image{
+  margin-bottom: .5rem;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.card .card-description{
+  color: rgb(19, 19, 19);
+}
+
+.card .label{
+  background-color: #f5f5f5;
+  position:relative;
+  top: -3.5rem;
+  left: 10%;
+  margin-bottom: -3rem;
+  height: 1.5rem;
+  border-radius: 10px;
+  width: 80%;
+  /* top: rem; */
+  z-index: 1;
+}
+
+.photo-name{
+  color: #092126;
+  font-size: 1rem;
+  padding-top: 5px;
+}
+
+.hakdog{
+  border: 1px solid rgba(148, 148, 148, 0.815);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.205);
+  max-width: 10rem;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+}
+
+.hakdog p{
+  margin: 0;
+}
+
+
+.collection{
+  background-color: #092126;
+  color: #f5f5f5;
+  margin-top: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.title{
+  font-size: 2.5rem;
+}
+
+.collection-descrip{
+  width: 75%;
+}
