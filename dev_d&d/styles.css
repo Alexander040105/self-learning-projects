@@ -1,0 +1,25 @@
+body {
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .container {
+    background-color: #121212;
+    box-shadow: 0 0 20px rgba(253, 253, 253, 0.1);
+    color: #ffffff;
+}
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
