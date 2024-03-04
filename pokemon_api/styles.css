@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body{
     margin: 0;
     padding: 0;
+    background-color: #BF6E3F;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    text-align: center;
+    color: #F2F2F2;
+    font-family: "Poppins", sans-serif;
 }
 
 #pokemonSprite{
@@ -15,16 +24,48 @@ body{
 }
 
 .buttons button{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
     margin: 1rem;
-    height: 2rem;
+    height: 2.5rem;
     width: 5rem;
     border-radius: 8px;
     border: none;
+    padding: 10px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    background-color: #F2F2F2;
+    border: 1px solid rgba(148, 148, 148, 0.815);
+    box-shadow: 3px 3px 3px rgba(46, 46, 46, 0.205);
+
+}
+
+input{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    border: 1px solid rgba(148, 148, 148, 0.815);
+    box-shadow: 3;
+    height: 1.5rem;
+    width: 10rem;
+    border-radius: 8px;
+    padding: 10px;
+    border: none;
+    margin-bottom: 1rem;
 }
 
 .contents{
+    transform: translate(50%,30%);
+    background-color: #F28D52;
+    box-shadow: 10px 10px 10px #f2e8ace7;
+    border: 1px solid #f2e8ac93;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 50%;
+    border-radius: 5rem;
+}
+
+p{
+    font-size: .5rem;
 }
