@@ -1,4 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
 #pokemonSprite{
     height: 10rem;
     width: 10rem;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons button{
+    margin: 1rem;
+    height: 2rem;
+    width: 5rem;
+    border-radius: 8px;
+    border: none;
+}
+
+.contents{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }

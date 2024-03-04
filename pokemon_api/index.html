@@ -7,14 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" id="pokemonName" placeholder="Who's that pokemon?">
-    <button id="start" onclick="questions(pokemon)">Start</button><br>
-    <button id="next" style="display: none;">Next</button>
-    <h1 id="result"></h1>
+    <div class="contents">
+        <div class="questionPokemon">
+            <img src="" alt="" id="pokemonSprite" style="display: none;">
+            <p id="pokemonType"></p>    
+        </div>
+        
+        <h1 id="result"></h1>
 
-    <img src="" alt="" id="pokemonSprite" style="display: none;">
-
-
+        <div class="buttons">
+            <input type="text" id="pokemonName" placeholder="Who's that pokemon?">
+            <!-- <button id="start" onclick="startPokemon(pokemon)">Start</button><br> -->
+            <button id="submit" onclick="submitPokemon()">Submit</button><br>
+            <button id="hint" onclick="hintPokemon()">Hint</button><br>
+            <button id="next" style="display: none;">Next</button>    
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
