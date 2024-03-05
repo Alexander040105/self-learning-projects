@@ -10,6 +10,7 @@ body{
     text-align: center;
     color: #F2F2F2;
     font-family: "Poppins", sans-serif;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 .questionPokemon{
