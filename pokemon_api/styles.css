@@ -12,9 +12,17 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
+.questionPokemon{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 #pokemonSprite{
-    height: 10rem;
-    width: 10rem;
+    height: 15rem;
+    width: 15rem;
 }
 
 .buttons{
@@ -23,10 +31,26 @@ body{
     justify-content: center;
 }
 
+#darkMode{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin: 5px;
+    height: 2.5rem;
+    width: 8rem;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    background-color: #F2F2F2;
+    border: 1px solid rgba(148, 148, 148, 0.815);
+    box-shadow: 3px 3px 3px rgba(46, 46, 46, 0.205);
+}
+
 .buttons button{
     font-family: "Poppins", sans-serif;
     font-weight: 600;
-    margin: 1rem;
+    margin: 10px;
     height: 2.5rem;
     width: 5rem;
     border-radius: 8px;
@@ -54,7 +78,7 @@ input{
 }
 
 .contents{
-    transform: translate(50%,30%);
+    transform: translate(50%,5%);
     background-color: #F28D52;
     box-shadow: 10px 10px 10px #f2e8ace7;
     border: 1px solid #f2e8ac93;
@@ -67,5 +91,33 @@ input{
 }
 
 p{
-    font-size: .5rem;
+    margin: 0;
+    font-size: 1rem;
+    width: 80%;
+    text-align: center;
+}
+
+.dark-mode{
+    background-color: #141414;
+}
+
+.dark-mode .contents{
+    background-color: #1d1d1d;
+    box-shadow: 10px 10px 10px #8dd7fae5;
+    border: 1px solid #8dd7fae8;
+}
+
+.dark-mode button, #darkMode{
+    background-color: #F2F2F2;
+    box-shadow: 2.5px 2.5px 2.5px #8dd7fae5;
+    border: 1px solid #8dd7fae8;
+}
+
+#result{
+    width: 80%;
+    font-size: 1.25rem;
+}
+
+#wtp{
+    font-size: 2rem;
 }

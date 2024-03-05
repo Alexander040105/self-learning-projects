@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="contents">
-        <h1>Pokemon Quizzzou?</h1>
+        <h1 id="wtp">Who's That Pokemon</h1>
         <div class="questionPokemon">
             <img src="" alt="" id="pokemonSprite" style="display: none;">
             <p id="pokemonType"></p>    
@@ -20,10 +20,11 @@
             <input type="text" id="enteredPokemonName" placeholder="Who's that pokemon?">
             <!-- <button id="start" onclick="startPokemon(pokemon)">Start</button><br> -->
             <button id="submit" onclick="submitPokemon()">Submit</button><br>
-            <!-- <button id="hint" onclick="hintPokemon()">Hint</button><br> -->
+            <button id="hint" onclick="hintPokemon()">Hint</button><br>
             <button id="next" style="display: none;">Next</button>    
             <button id="retry" style="display: none;">Retry</button>    
         </div>
+        <button id="darkMode">Dark Mode</button>
     </div>
     <script src="app.js"></script>
 </body>
