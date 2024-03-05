@@ -1,4 +1,4 @@
-const pokemon = ["charizard", "pikachu", "mewtwo", "zekrom", "reshiram", "bulbasaur", "charmander"];
+const pokemon = ["zacian","rillaboom","greninja","charizard", "pikachu", "mewtwo", "zekrom", "reshiram", "bulbasaur", "charmander"];
 let currentIndex = 0;
 let userScore = 0;
 const result = document.getElementById("result");
