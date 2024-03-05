@@ -50,10 +50,11 @@ function submitPokemon() {
         result.innerText = "You are Correct";
         enteredPokemonName.value = "" ;
         pokemonType.innerText = "";
-        next.style.display = "block";
+        fetchNextPokemon();
+        // next.style.display = "block";
 
-        next.removeEventListener("click", fetchNextPokemon); 
-        next.addEventListener("click", fetchNextPokemon);
+        // next.removeEventListener("click", fetchNextPokemon); 
+        // next.addEventListener("click", fetchNextPokemon);
 
         //the checking if the question is on the last pokemon on the array
         if (currentIndex === pokemon.length - 1) {
