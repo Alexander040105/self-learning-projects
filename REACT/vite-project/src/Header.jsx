@@ -1,24 +1,22 @@
-function Header(){
+function Header(props){
 
     return(
         <header>
             <nav className="navbar">
                 <nav className="navbar-links">
                     <ul>
-                        <li><a href="">Home</a></li>
-                        <li><a href="#">Books</a></li>
-                        <li><a href="#">Literary Works</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="#">Roses in Woodland</a></li>
+                        <li><a href="">{props.category1}</a></li>
+                        <li><a href="#">{props.category2}</a></li>
+                        <li><a href="#">{props.category3}</a></li>
+                        <li><a href="">{props.category4}</a></li>
                     </ul>
                 </nav>
         
                 <input aria-hidden="true" type="checkbox" id="menustate" class="toggle-button" />
                 <label href="" className="toggle-button">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+                    <span classNames="bar"></span>
+                    <span className="bar"></span>
+                    <span className="bar"></span>
                 </label>
         
                 <nav className="navbar-links">
