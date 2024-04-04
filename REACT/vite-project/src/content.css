@@ -1,0 +1,18 @@
+.blog-post p{
+    font-size: 1rem;
+    width: 85%;
+    line-height: 1.5rem;
+
+}
+
+.blog-post h2{
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgb(87, 87, 87);
+    font-style: italic;
+}
+
+.blog-post h1{
+    font-size: 2rem;
+    font-weight: 500;
+}

@@ -1,0 +1,12 @@
+.archives-list li{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin-left: -2rem;
+}
+
+.archives-list li a{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: rgb(25, 171, 255);
+}

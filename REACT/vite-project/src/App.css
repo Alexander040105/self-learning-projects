@@ -40,3 +40,34 @@
 .read-the-docs {
   color: #888;
 } */
+
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+.two-panels{
+  display: flex;
+  align-items: space-between;
+  justify-content: center;
+}
+
+.blog-posts{
+  margin-left: 6rem;
+}
+
+.home-contents{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.side-panel{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:baseline;
+  width: 90%;
+  margin-left: -5rem;
+  margin-right: 5rem;
+}
+

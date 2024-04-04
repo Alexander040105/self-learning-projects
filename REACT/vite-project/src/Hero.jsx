@@ -1,4 +1,5 @@
 import heroPic from './assets/lighting-01.jpg'
+import './hero.css'
 
 function Hero(){
 

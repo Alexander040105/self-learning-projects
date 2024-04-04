@@ -1,0 +1,30 @@
+
+.heroSection{
+    background-image: url(./assets/background.jfif);
+    background-size: cover;
+    margin: 1rem;
+    margin-left: 6.25rem;
+    height: 30rem;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-side{
+    color: black;
+    width: 50%;
+}
+
+.right-side p{
+    width: 75%;
+}
+
+#heroImg{
+    width: 32rem;
+    height: 28rem;
+    border-radius: 20px;
+} 
+.cards{
+    transform: translate(5%,0%);
+}
