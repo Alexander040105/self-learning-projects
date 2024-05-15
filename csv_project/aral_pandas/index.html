@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function hello(){
+            const url = 'https://yahoo-finance15.p.rapidapi.com/api/v2/markets/tickers?type=STOCKS&page=1';
+            const options = {
+                method: 'GET',
+                headers: {
+                    'X-RapidAPI-Key': 'cf77ce770amsh138dc2dea2cc5d9p11e87ajsn3f8aca890336',
+                    'X-RapidAPI-Host': 'yahoo-finance15.p.rapidapi.com'
+                }
+            };
+
+            try {
+                const response = await fetch(url, options);
+                const result = await response.json();
+                console.log(result);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        hello()
+    </script>
+</body>
+</html>
