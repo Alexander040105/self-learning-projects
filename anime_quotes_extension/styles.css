@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Tiny5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #044040;
+    color: #F2F2F2;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+button{
+    font-family: "Tiny5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: none;
+    border-radius: 8px;
+    height: 2rem;
+    margin-bottom: 1rem;
+    background-color: #D92525;
+    color: #F2F2F2;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover{
+    background-color: #591C21;
+}
+
+.pic-container{
+    width: 10rem; /* Set the desired width */
+    height: 10rem; /* Set the desired height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#waifu-pics{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+
+.container{
+    width: 10rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}

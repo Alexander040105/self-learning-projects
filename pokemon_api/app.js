@@ -20,10 +20,12 @@ async function startPokemon(pokemonName) {
     }
 
     const data = await response.json();
+
+    //data of the photos
     const pokemonSprite = data.sprites.front_default;
     // console.log(data);
     const pokeSprite = document.getElementById("pokemonSprite");
-
+    //changing the photo into the pokemon sprite
     pokeSprite.src = pokemonSprite;
     pokeSprite.style.display = "block";
     result.innerText = "";

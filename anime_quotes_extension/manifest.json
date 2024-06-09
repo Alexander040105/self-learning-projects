@@ -1,0 +1,11 @@
+{
+    "name": "Anime GIF Generator",
+    "version": "1.0.0",
+    "description": "This is an extension that randomly shows anime GIFs",
+    "manifest_version": 3,
+    "author": "DRK",
+    "action":{
+        "default_popup":"index.html",
+        "default_title": "Anime GIF Generator"
+    }
+}
