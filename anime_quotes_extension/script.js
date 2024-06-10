@@ -29,7 +29,7 @@ function changePic() {
 
 nsfwButton.addEventListener('click', function() {
     fetchPictures(apiNSFW);
-    console.log("Not Safe For Work Bro")
+    console.log("Not  Safe For Work Bro")
 });
 
 sfwButton.addEventListener('click', function() {
