@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <ul>
+        <!-- uses for loop to iterate the list and put it in the jinja {{ student }}-->
+        <!-- -->
+        {% for student in students %}
+            <li>{{ student }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
