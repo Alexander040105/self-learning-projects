@@ -3,14 +3,15 @@
 {% block body %}
 
     <h1>Register for FROSHIM</h1>
-        <form action="/register" method="post">
-            <input name="name" value="" placeholder="Name" type="text">
-            <select name="dorm" id="">
-                <option disabled selected value="">Dorm</option>
-                <option value="Apley Court">Apley Court</option>
-                <option value="Canaday">Canaday</option>
-            </select>
-            <input type="submit" value="Register">
+    <form action="/register" method="post">
+        <input name="name" value="" placeholder="Name" type="text">
+        <select name="dorm" id="">
+            <option disabled selected value="">Dorm</option>
+            <option value="Apley Court">Apley Court</option>
+            <option value="Canaday">Canaday</option>
+        </select>
+        <input type="submit" value="Register">
     </form>
 
 {% endblock %}
+
