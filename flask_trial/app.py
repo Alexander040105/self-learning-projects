@@ -5,7 +5,6 @@ import csv
 #configure app
 app = Flask(__name__)
 
-#where we store students names
 students = []
 
 numberOfRegistrant = 0
@@ -44,10 +43,10 @@ def register():
         return render_template("fail.html")
     
     #adding the data from the site onto a csv file
-    file = open("registered.csv", "a")
+    file = open("registered.csv", "a", newline='')
     writeCSV = csv.writer(file)
     #writes the data onto a row in the csv
-    writeCSV.writerow((name, dorm))
+    writeCSV.writerow((request.form.get("name"), request.form.get("dorm")))
     file.close()
     
     return render_template("success.html")

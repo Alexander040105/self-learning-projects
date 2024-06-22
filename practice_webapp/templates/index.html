@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="main_form">
+        <h1>Air Quality Index{{ city2 }}</h1>
+        <form action="/display" method="post">
+            <select name="city" id="city_select">
+                <option disabled selected value="">Countries</option>
+                <option value="Manila">Manila</option>
+                <option value="Seoul">Seoul</option>
+                <option value="Jakarta">Jakarta</option>
+                <option value="New York">New York</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="London">London</option>
+            </select>
+            <input type="submit" value="Process the Data">
+        </form>
+    </div>
+
+    <div class="pollutants_data">
+        <img src="data:image/png;base64, {{ plot_base64 }}" alt="">
+        <div class="pollutants_Aqi">
+            <h1>Pollutants AQI{{ city2 }}</h1>
+            <ul>
+                {% for elements in pollutantsAqi %}
+                    <li><strong>{{ elements['Pollutants'] }} AQI: </strong>{{ elements['Pollutants Aqi'] }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="pollutants_Concentration">
+            <h1>Pollutants Concentration{{ city2 }}</h1>
+            <ul>
+                {% for elements in pollutantsConcentration %}
+                    <li><strong>{{ elements['Pollutants'] }} AQI:</strong> {{ elements['Pollutants Concentration'] }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}

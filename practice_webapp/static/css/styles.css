@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body{
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #36BFBF;
+    color: #393939;
+}
+
+.main_form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.main_form h1{
+    font-size: 2rem;
+}
+
+form select{
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    width: 8rem;
+    height: 2rem;
+    cursor: pointer;
+    color: #393939;
+}
+
+option{
+    border-radius: 4px;
+    color: #393939;
+}
+
+form input{
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    width: 10rem;
+    height: 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #BDF2F2;
+    color: #393939;
+}
+
+form input:hover{
+    background-color: #79D9D9;
+}
+
+.pollutants_Aqi, .pollutants_Concentration{
+    border: 1px solid rgba(148, 148, 148, 0.815);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    max-width: 12rem;
+    box-shadow: 10px 10px 10px rgba(46, 46, 46, 0.205);
+    width: 300rem;
+    height: 18rem;
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #393939;
+}
+
+.pollutants_Aqi h1, .pollutants_Concentration h1{
+    font-size: 1.5rem;
+}
+
+.pollutants_data{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pollutants_Aqi ul li, .pollutants_Concentration ul li{
+    font-size: 1rem;
+    list-style-type: none;
+    /* margin-left: 1rem; */
+    text-align: left;
+}
+
+img{
+    border-radius: 15px;
+}
