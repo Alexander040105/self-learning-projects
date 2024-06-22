@@ -4,8 +4,9 @@ body{
     font-family: "Open Sans", sans-serif;
     margin: 0;
     padding: 0;
+    background-image: linear-gradient(to right, #36BFBF , #79D9D9);
     background-color: #36BFBF;
-    color: #393939;
+    color: #101010;
 }
 
 .main_form{
@@ -17,7 +18,7 @@ body{
 }
 
 .main_form h1{
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 form select{
@@ -27,12 +28,14 @@ form select{
     width: 8rem;
     height: 2rem;
     cursor: pointer;
-    color: #393939;
+    color: #101010;
 }
 
 option{
     border-radius: 4px;
-    color: #393939;
+    color: #101010;
+    box-shadow: 5px 5px 5px rgba(46, 46, 46, 0.205);
+    height: 3rem;
 }
 
 form input{
@@ -40,11 +43,12 @@ form input{
     border-radius: 8px;
     border: none;
     width: 10rem;
-    height: 2rem;
+    height: 3rem;
     cursor: pointer;
     font-weight: bold;
     background-color: #BDF2F2;
-    color: #393939;
+    color: #101010;
+    box-shadow: 5px 5px 5px rgba(46, 46, 46, 0.205);
 }
 
 form input:hover{
@@ -53,20 +57,19 @@ form input:hover{
 
 .pollutants_Aqi, .pollutants_Concentration{
     border: 1px solid rgba(148, 148, 148, 0.815);
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 20px;
     margin: 10px;
-    max-width: 12rem;
+    width: 14rem;
     box-shadow: 10px 10px 10px rgba(46, 46, 46, 0.205);
-    width: 300rem;
-    height: 18rem;
+    height: 17rem;
     text-align: center;
     background-color: #f2f2f2;
-    color: #393939;
+    color: #101010;
 }
 
 .pollutants_Aqi h1, .pollutants_Concentration h1{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .pollutants_data{
@@ -84,4 +87,32 @@ form input:hover{
 
 img{
     border-radius: 15px;
+    margin-right: 20px;
+    border: 1px solid rgba(148, 148, 148, 0.815);
+    box-shadow: 10px 10px 10px rgba(46, 46, 46, 0.205);
+}
+
+
+.fail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fail button{
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    width: 12rem;
+    height: 3rem;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #BDF2F2;
+    box-shadow: 5px 5px 5px rgba(46, 46, 46, 0.205);
+}
+
+.fail button a{
+    text-decoration: none;
+    color: #101010;
 }

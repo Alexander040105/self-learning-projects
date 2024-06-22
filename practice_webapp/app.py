@@ -43,7 +43,7 @@ def processing_image():
     dataFrame = {'Pollutants': pollutants, 'Pollutants Concentration': elementsConcentration, 'Pollutants Aqi': elementsAqi}
     pollutantsDataFrame = pd.DataFrame(dataFrame)
     
-    fig, (ax1, ax2) = plt.subplots(1,2, figsize=(8,4))
+    fig, (ax1, ax2) = plt.subplots(1,2, figsize=(7,4))
     
     #plotting aqi
     ax1.bar(pollutantsDataFrame['Pollutants'], pollutantsDataFrame['Pollutants Aqi'], color='#36BFBF', label='Pollutants AQI')
@@ -82,13 +82,17 @@ def processing_image():
 @app.route("/display", methods=["POST"])
 def display():
     city = request.form.get("city")
-    city2 = ((" of " + city))
-    plot_base64, pollutants_aqi, pollutants_concentration = processing_image()
-    return render_template("index.html", plot_base64=plot_base64, pollutantsAqi=pollutants_aqi, pollutantsConcentration=pollutants_concentration, city2=city2)
+    if not city:
+        return render_template("fail.html")
+    else:
+        city2 = ((" of " + city))
+        plot_base64, pollutants_aqi, pollutants_concentration = processing_image()
+        return render_template("index.html", plot_base64=plot_base64, pollutantsAqi=pollutants_aqi, pollutantsConcentration=pollutants_concentration, city2=city2)
 
 @app.route("/")
 def index():
     return render_template("index.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True)

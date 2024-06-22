@@ -5,19 +5,21 @@
         <h1>Air Quality Index{{ city2 }}</h1>
         <form action="/display" method="post">
             <select name="city" id="city_select">
-                <option disabled selected value="">Countries</option>
+                <option disabled selected value="">Cities</option>
                 <option value="Manila">Manila</option>
                 <option value="Seoul">Seoul</option>
                 <option value="Jakarta">Jakarta</option>
                 <option value="New York">New York</option>
                 <option value="Tokyo">Tokyo</option>
                 <option value="London">London</option>
+                <option value="Berlin">Berlin</option>
+                <option value="Paris">Paris</option>
             </select>
-            <input type="submit" value="Process the Data">
+            <input id="submitButton" type="submit" value="Process the Data">
         </form>
     </div>
 
-    <div class="pollutants_data">
+    <div class="pollutants_data" id="pollutants_data">
         <img src="data:image/png;base64, {{ plot_base64 }}" alt="">
         <div class="pollutants_Aqi">
             <h1>Pollutants AQI{{ city2 }}</h1>
@@ -32,10 +34,11 @@
             <h1>Pollutants Concentration{{ city2 }}</h1>
             <ul>
                 {% for elements in pollutantsConcentration %}
-                    <li><strong>{{ elements['Pollutants'] }} AQI:</strong> {{ elements['Pollutants Concentration'] }}</li>
+                    <li><strong>{{ elements['Pollutants'] }}:</strong> {{ elements['Pollutants Concentration'] }}</li>
                 {% endfor %}
             </ul>
         </div>
     </div>
 
+    {# <script src="{{ url_for('static', filename='js/script.js') }}"></script> #}
 {% endblock %}
