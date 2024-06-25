@@ -13,10 +13,6 @@ from dotenv import load_dotenv, dotenv_values
 load_dotenv() 
 API_KEY = os.getenv('AQI_KEY')
 
-
-
-
-
 app = Flask(__name__)
 
 #make the plots

@@ -21,7 +21,7 @@
 
     <div class="pollutants_data" id="pollutants_data">
         <img src="data:image/png;base64, {{ plot_base64 }}" alt="">
-        <div class="pollutants_Aqi">
+        <div class="pollutants_Aqi" id="aqi">
             <h1>Pollutants AQI{{ city2 }}</h1>
             <ul>
                 {% for elements in pollutantsAqi %}
@@ -30,7 +30,7 @@
             </ul>
         </div>
 
-        <div class="pollutants_Concentration">
+        <div class="pollutants_Concentration" id="concentration">
             <h1>Pollutants Concentration{{ city2 }}</h1>
             <ul>
                 {% for elements in pollutantsConcentration %}
@@ -40,5 +40,8 @@
         </div>
     </div>
 
-    {# <script src="{{ url_for('static', filename='js/script.js') }}"></script> #}
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {# <script>
+        console.log("Hellloo");
+    </script> #}
 {% endblock %}
