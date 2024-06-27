@@ -1,0 +1,55 @@
+CREATE DATABASE databaseName; - to create database
+DROP DATABASE databaseName; - to delete the whole database
+DROP TABLE tableName; - to delete the table
+ALTER DATABASE dbOne READ ONLY = 1; - to read only mode
+
+
+CREATE TABLE employees(
+	content_of_tables DATATYPE
+);
+
+Datatypes:
+
+INT
+VARCHAR(# of characters)
+DECIMAL(#digits, decimal point)
+DATE
+DATETIME
+
+SELECT * FROM tableName; = selecting the table from the schema 
+asterisk == all of the columns and rows
+SELECT columnName FROM tableName;
+
+to select the whole row that has the rowValue
+SELECT * FROM tableName WHERE columnName = rowValue; 
+
+you can also use <= or >= in the WHERE method
+
+
+RENAME TABLE initialTableName TO newTableName
+RENAME COLUMN - to rename a column of a table
+
+ALTER TABLE employees  - to edit the table
+ADD columnName DATATYPE(); - to add a new column
+
+MODIFY COLUMN columnName NEWDATATYPE() - to change the data type of a column
+
+
+To move the column beside another column in the order you want:
+ALTER TABLE tableName
+MODIFY columnName DATATYPE()
+AFTER desiredColumn;
+
+you can also use FIRST to make the column as the first column in the table
+
+
+inserting row/values to the table:
+use the name of the column as a parameter to select the columns you only want to insert the data
+INSERT INTO tableName(parameter)
+
+take note of the datatypes the values are separated by commas
+VALUES (1,"element", ""), 
+       (2, "another row", "")
+       (3, "another row", ""); 
+
+date format for the DATE datatype= YYYY-MM-DD
