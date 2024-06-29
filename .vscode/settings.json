@@ -21,5 +21,6 @@
     "peacock.color": "#532559",
     "files.readonlyInclude": {
         "{**/.c4z/.extsrcs/*.PROTSYM.cbl,**/.c4z/.extsrcs/*.PROTSYM.listing}": true
-    }
+    },
+    "python.analysis.typeCheckingMode": "off"
 }
