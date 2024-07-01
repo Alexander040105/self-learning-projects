@@ -1,0 +1,15 @@
+RENAME TABLE tableName TO newName; -- renaming a table
+USE databaseName; -- use the database as default
+DROP DATABASE; -- delete a database
+DROP TABLE; -- delete a table
+DROP COLUMN; -- deleting a column
+CREATE DATABASE; -- creating databases
+CREATE TABLE; -- creating table
+SELECT * FROM; -- showing the table
+ALTER TABLE; -- altering the table
+ADD; --to add another elements to the table
+RENAME COLUMN; --renaming an element
+MODIFY COLUMN; -- changing the data type
+AFTER; -- after a certain element
+FIRST; -- making the element of choice the first column
+INSERT INTO variableName VALUES(),(),();
