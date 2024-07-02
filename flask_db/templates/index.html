@@ -1,0 +1,12 @@
+{% extends "layouts.html" %}
+
+{% block body %}
+    <form action="/addDetails" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="username">
+        <label for="email">E-mail</label>
+        <input type="text" name="emailAddress">
+        <input type="submit" value="Register">
+    </form>
+{% endblock %}
+
