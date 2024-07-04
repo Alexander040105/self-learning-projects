@@ -26,7 +26,7 @@ class Users(dataBase.Model):
 
 @app.route("/addDetails", methods=["GET","POST"])
 def addDetails():
-    if request.methods == "POST":
+    if request.method == "POST":
         username = request.form['username']
         email = request.form['emailAddress']
         
@@ -39,7 +39,10 @@ def addDetails():
         #save the changes to the database
         dataBase.session.commit()
         
-        return render_template('index.html')
+        # Retrieve all users
+        users = Users.query.all()
+        
+        return render_template('index.html', users=users)
 
 @app.route("/")
 def index():

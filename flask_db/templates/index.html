@@ -8,5 +8,11 @@
         <input type="text" name="emailAddress">
         <input type="submit" value="Register">
     </form>
+
+    <ul>
+        {% for user in users  %}
+            <li>{{user.username}}</li>
+        {% endfor %}
+    </ul>
 {% endblock %}
 
