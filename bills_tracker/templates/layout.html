@@ -18,9 +18,11 @@
 
     <div id="plotly-plot"></div>
         
+    {% if plot_json %}
     <script>
         var plot_data = {{ plot_json|safe }};
         Plotly.react('plotly-plot', plot_data.data, plot_data.layout);
     </script>
+    {% endif %}
 </body>
 </html>
