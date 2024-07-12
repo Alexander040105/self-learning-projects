@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    --white: #E2EBF2;
+    --dark: #2E3643;
+}
+
+body{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    color: var(--dark);
+}
+
+.coordinates, .weatherDetails{
+    display: flex;
+    justify-content: center;
+}
+
+.weatherDetails{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#country, #typeWeather, #latLabel, #lonLabel{
+    font-weight: 400;
+}
+
+#typeWeather{
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+#weatherIcon{
+    margin: -1rem;
+    height: 6rem;
+    width: 6rem;
+}
+
+#temperature{
+    font-size: 3.5rem;
+    margin-bottom: .25rem;
+}
+
+.coordinates div{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#latLabel, #lonLabel{
+    font-size: 1rem;
+}
+
+.contents{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.search input,button{
+    font-family: "Poppins", sans-serif;
+    border-radius: 8px;
+    height: 2rem;
+    margin: .5rem;
+}
+
+.search input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom:2px solid var(--dark);
+    color: var(--dark);
+}
+
+.search button{
+    border: none;
+    color: var(--white);
+    background-color: var(--dark);
+    cursor: pointer;
+}   
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.dark-mode{
+    background-color: var(--dark);
+}
+
+.dark-mode .contents{
+    color: var(--white);
+}
+
+.dark-mode button{
+    background-color: var(--white);
+    color: var(--dark);
+}
+
+
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}

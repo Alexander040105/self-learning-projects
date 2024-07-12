@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body{
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, #36BFBF , #79D9D9);
+    background-color: #36BFBF;
+    color: #101010;
+}
+
+.main_form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.main_form h1{
+    font-size: 3rem;
+}
+
+form select{
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    width: 8rem;
+    height: 2rem;
+    cursor: pointer;
+    color: #101010;
+}
+
+option{
+    border-radius: 4px;
+    color: #101010;
+    box-shadow: 5px 5px 5px rgba(46, 46, 46, 0.205);
+    height: 3rem;
+}
+
+form input{
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    width: 10rem;
+    height: 3rem;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #BDF2F2;
+    color: #101010;
+    box-shadow: 5px 5px 5px rgba(46, 46, 46, 0.205);
+}
+
+form input:hover{
+    background-color: #79D9D9;
+}
+
+.pollutants_Aqi, .pollutants_Concentration{
+    border: 1px solid rgba(148, 148, 148, 0.815);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    width: 14rem;
+    box-shadow: 10px 10px 10px rgba(46, 46, 46, 0.205);
+    height: 17rem;
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #101010;
+}
+
+.pollutants_Aqi h1, .pollutants_Concentration h1{
+    font-size: 1.25rem;
+}
+
+.pollutants_data{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pollutants_Aqi ul li, .pollutants_Concentration ul li{
+    font-size: 1rem;
+    list-style-type: none;
+    /* margin-left: 1rem; */
+    text-align: left;
+}
+
+img{
+    border-radius: 15px;
+    margin-right: 20px;
+    border: 1px solid rgba(148, 148, 148, 0.815);
+    box-shadow: 10px 10px 10px rgba(46, 46, 46, 0.205);
+}
+
+
+.fail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fail button{
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    width: 12rem;
+    height: 3rem;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #BDF2F2;
+    box-shadow: 5px 5px 5px rgba(46, 46, 46, 0.205);
+}
+
+.fail button a{
+    text-decoration: none;
+    color: #101010;
+}
+
+.weatherData{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid rgba(148, 148, 148, 0.815);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    width: 14rem;
+    box-shadow: 10px 10px 10px rgba(46, 46, 46, 0.205);
+    height: 25rem;
+    background-color: #f2f2f2;
+}
+
+
+.coordinates, .weatherDetails{
+    display: flex;
+    justify-content: center;
+}
+
+.weatherDetails{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#country, #typeWeather, #latLabel, #lonLabel{
+    font-weight: 400;
+}
+
+#typeWeather{
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+#weatherIcon{
+    border: none;
+    box-shadow: 0;
+    margin: -1rem;
+    height: 5rem;
+    width: 5rem;
+}
+
+#temperature{
+    font-size: 3.5rem;
+    margin-bottom: .25rem;
+}
+
+.coordinates div{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#latLabel, #lonLabel{
+    font-size: 1rem;
+}
+
+.contents{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
