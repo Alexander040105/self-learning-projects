@@ -1,11 +1,13 @@
 {% extends "layout.html" %}
 
 {% block body %}
-    <h1 id="movieTitle">Movie Trackerrr</h1>
-    <form action="/search" method="post">
-        <label for="search">Search for Movies or TV Series</label>
-        <input type="text" for="movieSearch" name="movieSearch" id="searchBar">
-        <input id="searchButton" type="submit" value="Search">
-    </form>
+    <div class="container">
+        <h1 id="movieTitle">Movie Trackerrr</h1>
+        <form action="/search" method="post">
+            
+            <input type="text" for="movieSearch" name="movieSearch" id="searchBar" placeholder="Search for Movies or TV Series">
+            <input id="searchButton" type="submit" value="Search">
+        </form>
+    </div>
 
 {% endblock %}
