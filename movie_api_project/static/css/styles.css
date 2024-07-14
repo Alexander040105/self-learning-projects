@@ -92,8 +92,6 @@ ul li #movieDetails img{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: linear-gradient(rgb(122, 86, 219),rgb(147, 40, 209));
-
 }
 
 input{
