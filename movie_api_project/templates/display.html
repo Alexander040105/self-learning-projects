@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <ul>
+        {% for movie in movies  %}
+            <li id="movie">
+                <button id="movieDetails">
+                    {% if movie.Poster == "N/A" %}
+                            <div id="noPoster">
+                                <h1>The Poster is not available</h1>
+                            </div>
+                        {% else %}
+                            <div id="withPoster">
+                                <img src="{{ movie.Poster }}" alt="">
+                            </div>
+                        {% endif %}
+                        <h1>{{ movie.Title }}</h1>
+                        <h2>{{ movie.Year }}</h2>
+                </button>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

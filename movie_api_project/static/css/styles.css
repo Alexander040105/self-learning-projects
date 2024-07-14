@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+ul{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+ul li{
+    list-style-type: none;
+}
+
+#movieDetails{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem;
+    width: 15rem;
+    height: 22rem;
+    border: rgb(180, 180, 180) 10px;
+    border-radius: 10px;
+    box-shadow: rgb(131, 131, 131) 2px 2px 15px;
+    cursor: pointer;
+}
+
+#movieDetails:focus{
+    background-color: blue;
+}
+
+#movieDetails h1{
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+#withPoster{
+    width: 12rem;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+ul li #movieDetails img{
+    max-width: 12rem;
+    max-height: 15rem;
+}
+
+#noPoster{
+    width: 12rem;
+    height: 15rem;
+    max-width: 12rem;
+    max-height: 15rem;
+    background-color: rgb(180, 180, 180);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#noPoster h1{
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+}

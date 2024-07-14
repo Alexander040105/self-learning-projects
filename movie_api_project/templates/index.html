@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="">
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1 id="movieTitle">Movie Trackerrr</h1>
+    <form action="/search" method="post">
         <label for="search">Search for Movies or TV Series</label>
-        <input type="text" id="searchBar">
+        <input type="text" for="movieSearch" name="movieSearch" id="searchBar">
         <input id="searchButton" type="submit" value="Search">
     </form>
-</body>
-</html>
+
+{% endblock %}
