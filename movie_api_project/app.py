@@ -13,10 +13,22 @@ app = Flask(__name__)
 def searchMovie():
     userSearch = request.form.get('movieSearch')
     processedData = userSearch.replace(' ', '+')
-    api_url = f'http://www.omdbapi.com/?apikey={API_KEY}&s={processedData}'
+    
+    # 10 movie titles per page
+    api_url = f'http://www.omdbapi.com/?apikey={API_KEY}&s={processedData}&page=1'
+    api_url_imdb_ID = f'http://www.omdbapi.com/?apikey={API_KEY}&s={processedData}&page=1'
     response = requests.get(api_url)
     data = response.json()
-    movies = data.get('Search', []) 
+    movies = data.get('Search', [])
+    
+    if 'totalResults' in data and data['totalResults'] is not None:
+        try:
+            total_results = int(data['totalResults'])
+        except ValueError:
+            total_results = 0  
+    else:
+        total_results = 0 
+    
     
     return render_template("display.html", movies=movies)
     
