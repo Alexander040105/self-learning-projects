@@ -1,38 +1,61 @@
 {% extends "layout.html" %}
 
 {% block body %}
+    <nav aria-label="Page navigation example" id="pagination">
+        <ul class="pagination justify-content-center">
+            {% if current_page > 1 %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('searchMovie', movieSearch=user_search, page=current_page-1) }}">Previous</a>
+                </li>
+            {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+            {% endif %}
+            
+            {% for page in range(1, total_pages + 1) %}
+                {% if page == current_page %}
+                    <li class="page-item active">
+                        <a class="page-link" href="#">{{ page }}</a>
+                    </li>
+                {% else %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ url_for('searchMovie', movieSearch=user_search, page=page) }}">{{ page }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+            {% if current_page < total_pages %}
+                <li class="page-item">
+                    <a class="page-link" href="{{ url_for('searchMovie', movieSearch=user_search, page=current_page+1) }}">Next</a>
+                </li>
+            {% else %}
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Next</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+
     <ul>
-        {% for movie in movies  %}
+        {% for movie in movies %}
             <li id="movie">
                 <button id="movieDetails">
                     {% if movie.Poster == "N/A" %}
-                            <div id="noPoster">
-                                <h1>The Poster is not available</h1>
-                            </div>
-                        {% else %}
-                            <div id="withPoster">
-                                <img src="{{ movie.Poster }}" alt="">
-                            </div>
-                        {% endif %}
-                        <h1>{{ movie.Title }}</h1>
-                        <h2>{{ movie.Year }}</h2>
+                        <div id="noPoster">
+                            <h1>The Poster is not available</h1>
+                        </div>
+                    {% else %}
+                        <div id="withPoster">
+                            <img src="{{ movie.Poster }}" alt="">
+                        </div>
+                    {% endif %}
+                    <h1>{{ movie.Title }}</h1>
+                    <h2>{{ movie.Year }}</h2>
                 </button>
             </li>
         {% endfor %}
-
-
-        <nav aria-label="Page navigation example" id="pagination">
-            <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1">Previous</a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-                </li>
-            </ul>
-        </nav>
     </ul>
+
+    
 {% endblock %}

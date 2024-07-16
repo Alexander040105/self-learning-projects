@@ -85,7 +85,7 @@ ul li #movieDetails img{
     text-align: center;
 }
 
-.container{
+.searchContainer{
     width: 100%;
     height: 35rem;
     display: flex;
