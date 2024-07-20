@@ -109,6 +109,7 @@ input{
     width: 35rem;
     margin: .5rem;
     border: none;
+    height: 2rem;
 }
 
 #searchBar:focus{

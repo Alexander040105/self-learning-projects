@@ -5,7 +5,7 @@
         <ul class="pagination justify-content-center">
             {% if current_page > 1 %}
                 <li class="page-item">
-                    <a class="page-link" href="{{ url_for('searchMovie', movieSearch=user_search, page=current_page-1) }}">Previous</a>
+                    <a class="page-link" href="{{ url_for('search.searchMovie', movieSearch=user_search, page=current_page-1) }}">Previous</a>
                 </li>
             {% else %}
                 <li class="page-item disabled">
@@ -20,14 +20,14 @@
                     </li>
                 {% else %}
                     <li class="page-item">
-                        <a class="page-link" href="{{ url_for('searchMovie', movieSearch=user_search, page=page) }}">{{ page }}</a>
+                        <a class="page-link" href="{{ url_for('search.searchMovie', movieSearch=user_search, page=page) }}">{{ page }}</a>
                     </li>
                 {% endif %}
             {% endfor %}
 
             {% if current_page < total_pages %}
                 <li class="page-item">
-                    <a class="page-link" href="{{ url_for('searchMovie', movieSearch=user_search, page=current_page+1) }}">Next</a>
+                    <a class="page-link" href="{{ url_for('search.searchMovie', movieSearch=user_search, page=current_page+1) }}">Next</a>
                 </li>
             {% else %}
                 <li class="page-item disabled">
