@@ -8,10 +8,12 @@ def getProfit():
     dailyProfit = request.form.get("dailyProfit")
     
     with open('file.csv', 'w', newline='') as file:
+        dailyProfit = int(dailyProfit)
         writer = csv.writer(file)
-        writer.writerow(dailyProfit)
+        writer.writerow([dailyProfit])
     
     return render_template("index.html" , dailyProfit=dailyProfit)
+
 @app.route('/')
 def index():
     return render_template("index.html")
