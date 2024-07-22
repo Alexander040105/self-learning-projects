@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <form action="/getProfit" method="post">
+        <input type="text" for="dailyProfit" name="dailyProfit" id="dailyProfit" placeholder="Input Daily Profit">
+        <input id="addData" type="submit" value="Add Data">
+        {# <input type="file" id="dataImage"> #}
+    </form>
+
+    <h1>{{ dailyProfit }}</h1>
+{% endblock  %}
