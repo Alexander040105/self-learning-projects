@@ -1,5 +1,65 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <form action="/getDetails"></form>
+    <form action="/getDetails" method="post">
+        <label for="clientBill">Client Name</label>
+        <input type="text" name="clientName" for="clientName" id="clientName" placeholder="Input client name">
+        <label for="clientBill">Client's Bill</label>
+        <input type="text" name="clientBill" for="clientBill" id="clientBill" placeholder="Input bill">
+        <label for="clientBill">Client Address (Format: House No., Brgy., City/Municipality)</label>
+        <input type="text" name="clientAddress" for="clientAddress" id="clientAddress" placeholder="Input client Address">
+        {# <select name="dorm" id="dorm" multiple>
+            <option disabled selected value="">Services Availed</option>
+            <option value="cleaning">Aircon Cleaning</option>
+            <option value="check-up">Check-up</option>
+            <option value="dismantle">Dismantle</option>
+            <option value="relocation">Relocation</option>
+            <option value="installation">Installation</option>
+        </select> #}
+
+        <label for="clientService">Services Availed</label>
+        <label><input type="checkbox" name="cleaning" value="Availed">Aircon Cleaning</label>
+        <label><input type="checkbox" name="check-up" value="Availed">Check-up</label>
+        <label><input type="checkbox" name="dismantle" value="Availed">Dismantle</label>
+        <label><input type="checkbox" name="relocation" value="Availed">Relocation</label>
+        <label><input type="checkbox" name="installation" value="Availed">Installation</label>
+        
+        <input type="submit" value="hello">
+    </form>
+
+    <h1>Client Table</h1>
+    <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for client">
+    <table border="1">
+        <!-- Iterate over headers to display column names -->
+        <tr>
+            {% for header in cellList[0] %}
+                <th>{{ header }}</th>
+            {% endfor %}
+        </tr>
+
+        <!-- Iterate over the rows in cellList -->
+        {% for row in cellList[1:] %}
+            <tr>
+                {% for cell in row %}
+                    <td>{{ cell }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+
+    {# <table>
+        <tr>
+            {% for bill in billList %}
+                <td>{{ bill }}</td>
+            {% endfor %}
+        </tr>
+
+        <tr>
+            {% for names in nameList %}
+                <td>{{ names }}</td>
+            {% endfor %}
+        </tr>
+    </table> #}
+    
+    <script src="{{ url_for('static', filename='/script.js') }}"></script>
 {% endblock %}
