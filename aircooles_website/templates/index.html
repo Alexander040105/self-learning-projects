@@ -1,51 +1,68 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <form action="/getDetails" method="post">
-        <label for="clientBill">Client Name</label>
-        <input type="text" name="clientName" for="clientName" id="clientName" placeholder="Input client name">
-        <label for="clientBill">Client's Bill</label>
-        <input type="text" name="clientBill" for="clientBill" id="clientBill" placeholder="Input bill">
-        <label for="clientBill">Client Address (Format: House No., Brgy., City/Municipality)</label>
-        <input type="text" name="clientAddress" for="clientAddress" id="clientAddress" placeholder="Input client Address">
-        {# <select name="dorm" id="dorm" multiple>
-            <option disabled selected value="">Services Availed</option>
-            <option value="cleaning">Aircon Cleaning</option>
-            <option value="check-up">Check-up</option>
-            <option value="dismantle">Dismantle</option>
-            <option value="relocation">Relocation</option>
-            <option value="installation">Installation</option>
-        </select> #}
+    <div class="contents">
+        <img id="aircooles-logo" src="{{ url_for('static', filename='/aircooles.png') }}" alt="">
+        <form action="/getDetails" method="post">
+            <div class="client-details">
+                <label for="clientBill">Client Name</label>
+                <input type="text" name="clientName" for="clientName" id="clientName" placeholder="Input client name">
+                <label for="clientBill">Client's Bill</label>
+                <input type="text" name="clientBill" for="clientBill" id="clientBill" placeholder="Input bill">
+                <label for="clientBill">Client Address (Example Format: Blk 14 Lot 8, Brgy. Salawag, Dasmariñas, Cavite)</label>
+                <input type="text" name="clientAddress" for="clientAddress" id="clientAddress" placeholder="Input client Address">
+            </div>
 
-        <label for="clientService">Services Availed</label>
-        <label><input type="checkbox" name="cleaning" value="Availed">Aircon Cleaning</label>
-        <label><input type="checkbox" name="check-up" value="Availed">Check-up</label>
-        <label><input type="checkbox" name="dismantle" value="Availed">Dismantle</label>
-        <label><input type="checkbox" name="relocation" value="Availed">Relocation</label>
-        <label><input type="checkbox" name="installation" value="Availed">Installation</label>
+            <div class="services-available">
+                <div class="services-label">
+                    <label for="clientService">Services Availed</label>
+                </div>
+
+                <div class="services-checkbox">
+                    <div class="checkboxes1">
+                        <label><input type="checkbox" name="cleaning" value="Availed">Aircon Cleaning</label>
+                        <label><input type="checkbox" name="check-up" value="Availed">Check-up</label>
+                        <label><input type="checkbox" name="dismantle" value="Availed">Dismantle</label>
+                    </div>
+
+                    <div class="checkboxes2">
+                        <label><input type="checkbox" name="relocation" value="Availed">Relocation</label>
+                        <label><input type="checkbox" name="installation" value="Availed">Installation</label>
+                    </div>
+                </div>
+            </div>
+
+            <input type="submit" value="Register Client">
+        </form>
         
-        <input type="submit" value="hello">
-    </form>
+        <div class="client-base">
+            <div class="searchClient">
+                <h1>Client Table</h1>
+                <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for client">
+            </div>
 
-    <h1>Client Table</h1>
-    <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for client">
-    <table border="1">
-        <!-- Iterate over headers to display column names -->
-        <tr>
-            {% for header in cellList[0] %}
-                <th>{{ header }}</th>
-            {% endfor %}
-        </tr>
+            <div class="client-table">            
+                <table id="myTable">
+                    <!-- Iterate over headers to display column names -->
+                    <tr class="headers">
+                        {% for header in cellList[0] %}
+                            <th>{{ header }}</th>
+                        {% endfor %}
+                    </tr>
 
-        <!-- Iterate over the rows in cellList -->
-        {% for row in cellList[1:] %}
-            <tr>
-                {% for cell in row %}
-                    <td>{{ cell }}</td>
-                {% endfor %}
-            </tr>
-        {% endfor %}
-    </table>
+                    <!-- Iterate over the rows in cellList -->
+                    {% for row in cellList[1:] %}
+                        <tr>
+                            {% for cell in row %}
+                                <td>{{ cell }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+
 
     {# <table>
         <tr>
@@ -61,5 +78,5 @@
         </tr>
     </table> #}
     
-    <script src="{{ url_for('static', filename='/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='/index.js') }}"></script>
 {% endblock %}

@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+#aircooles-logo{
+    height: 52.5px;
+    width: 346px;
+    margin-left: 6rem;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.client-details, .services-available{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+}
+
+.services-checkbox, .checkboxes1, .checkboxes2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-checkbox label, .services-checkbox input{
+    margin: .30rem;
+    text-align: center;
+}
+
+.client-details,.client-table,.services-available{
+    margin: 1rem;
+}
+
+.contents{
+    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.headers{
+    background-color: #fb6b2f;
+}
+
+.headers th{
+    background-color: #fb6b2f;
+}
+
+.searchClient{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.client-base{
+    background-color: #f2f2f2;
+    height: auto;
+    width: auto;
+}
+
+.client-table{
+    height: 30rem;
+    width: 100%;
+    overflow: auto;
+    object-fit: cover;
+}
+
+.client-table table{
+    text-align: center;
+    border-collapse: collapse;
+    /* border: 1px solid rgb(106, 106, 106); */
+    border-radius: 2rem;
+    background-color: #f2f2f2;
+}
+
+#myInput{
+    width: 30rem;
+    height: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px   solid #fb6b2f ;
+}
+
+.searchClient h1{
+    color: #fb6b2f;
+    font-size: 3rem;
+}
+
+.client-table tr{
+    text-align: center;
+}
+
+th,td{
+    padding: .5rem;
+    text-align: center;
+    border-bottom: 1px solid rgb(106, 106, 106);
+}
+
+th{
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #f2f2f2;
+}
+
+tr:hover{
+    background-color: #fb6b2f;
+    color: #f2f2f2;
+}
+
+td{
+    font-weight: 500;
+    width: 10rem;
+    font-size: 1rem;
+}
+
+
+.client-base{
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    /* background-color: rgb(113, 113, 113); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 480px) {
+
+
+
+    .services-available{
+        width: 25rem;
+    }
+
+
+    .services-available label{
+        font-size: 1rem;
+    }
+
+    .client-table{
+        height: 25rem;
+        width: 18rem;
+        
+    }
+
+    .client-table th{
+        font-size: 1.15rem;
+    }
+
+    .client-table td{
+        font-size: 1rem;
+    }
+    
+    .client-table th, .client-table td{
+        text-align: justify;
+    }
+
+
+    td{
+        font-weight: 500;
+        width: 5rem;
+    }
+
+    .services-checkbox{
+        flex-direction: column;
+    }
+
+        
+    #myInput{
+        width: auto;
+        height: .75rem;
+        padding: 1rem;
+        font-size: 1rem;
+        
+    }
+
+    .searchClient h1{
+        color: #fb6b2f;
+        font-size: 3rem;
+    }
+}
