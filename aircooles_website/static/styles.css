@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
+    background-color: #fb6b2f;
 }
 
 #aircooles-logo{
@@ -53,10 +54,6 @@ form{
 }
 
 
-.headers{
-    background-color: #fb6b2f;
-}
-
 .headers th{
     background-color: #fb6b2f;
 }
@@ -66,6 +63,7 @@ form{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-color: #f2f2f2;
 }
 
 .client-base{
@@ -79,14 +77,14 @@ form{
     width: 100%;
     overflow: auto;
     object-fit: cover;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
 }
 
 .client-table table{
     text-align: center;
     border-collapse: collapse;
     /* border: 1px solid rgb(106, 106, 106); */
-    border-radius: 2rem;
-    background-color: #f2f2f2;
 }
 
 #myInput{
@@ -96,11 +94,13 @@ form{
     font-size: 1rem;
     border-radius: 10px;
     border: 2px   solid #fb6b2f ;
+    background-color: #f2f2f2;
 }
 
 .searchClient h1{
     color: #fb6b2f;
-    font-size: 3rem;
+    font-size: 2rem;
+    background-color: #f2f2f2;
 }
 
 .client-table tr{
@@ -110,7 +110,9 @@ form{
 th,td{
     padding: .5rem;
     text-align: center;
+    border: 1px solid #f2f2f2;
     border-bottom: 1px solid rgb(106, 106, 106);
+    background-color: #f2f2f2;
 }
 
 th{
@@ -119,9 +121,9 @@ th{
     color: #f2f2f2;
 }
 
-tr:hover{
-    background-color: #fb6b2f;
-    color: #f2f2f2;
+tr:hover, td:hover{
+    color: #fb6b2f;
+    font-weight: 800;
 }
 
 td{
@@ -140,16 +142,35 @@ td{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 @media only screen and (max-width: 480px) {
-
-
-
+    *{
+        overflow: hidden;
+        overflow-y: scroll;
+    }
     .services-available{
         width: 25rem;
     }
 
+    .client-base{
+        border-radius: 2rem;
+    }
+
+    #tableName{
+        font-size: 2rem;
+        margin-top: -.5rem;
+        margin-bottom: .5rem;
+    }
+
+    #myInput{
+        width: auto;
+        height: .5rem;
+        padding: .75rem;
+        font-size: .8rem;
+        
+    }
 
     .services-available label{
         font-size: 1rem;
@@ -162,11 +183,11 @@ td{
     }
 
     .client-table th{
-        font-size: 1.15rem;
+        font-size: .8rem;
     }
 
     .client-table td{
-        font-size: 1rem;
+        font-size: .6rem;
     }
     
     .client-table th, .client-table td{
@@ -181,15 +202,6 @@ td{
 
     .services-checkbox{
         flex-direction: column;
-    }
-
-        
-    #myInput{
-        width: auto;
-        height: .75rem;
-        padding: 1rem;
-        font-size: 1rem;
-        
     }
 
     .searchClient h1{

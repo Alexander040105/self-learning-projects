@@ -2,7 +2,7 @@
 
 {% block content %}
     <div class="contents">
-        <img id="aircooles-logo" src="{{ url_for('static', filename='/aircooles.png') }}" alt="">
+        <img id="aircooles-logo" src="{{ url_for('static', filename='/aircooles-white.png') }}" alt="">
         <form action="/getDetails" method="post">
             <div class="client-details">
                 <label for="clientBill">Client Name</label>
@@ -37,7 +37,7 @@
         
         <div class="client-base">
             <div class="searchClient">
-                <h1>Client Table</h1>
+                <h1 id="tableName">Client Table</h1>
                 <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for client">
             </div>
 
