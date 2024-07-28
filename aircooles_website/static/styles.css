@@ -13,6 +13,7 @@
     height: 52.5px;
     width: 346px;
     margin-left: 6rem;
+    margin-bottom: 1rem;
 }
 
 form{
@@ -39,6 +40,7 @@ form{
 .services-checkbox label, .services-checkbox input{
     margin: .30rem;
     text-align: center;
+    color: #f2f2f2;
 }
 
 .client-details,.client-table,.services-available{
@@ -87,13 +89,38 @@ form{
     /* border: 1px solid rgb(106, 106, 106); */
 }
 
-#myInput{
+.client-details label, .services-label label{
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #f2f2f2;
+}
+
+#submitButton{
+    width: 30rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#submitButton:hover{
+    color: #f2f2f2;
+    background-color: #fb6b2f;
+}
+
+label{
+    text-align: center;
+}
+
+#myInput, #clientNameInput, #clientNumberInput, #clientBillInput, #clientAddressInput{
     width: 30rem;
     height: 1rem;
     padding: 1rem;
     font-size: 1rem;
     border-radius: 10px;
-    border: 2px   solid #fb6b2f ;
+    border: 2px   solid #fb6b2f;
     background-color: #f2f2f2;
 }
 
@@ -145,9 +172,17 @@ td{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-@media only screen and (max-width: 480px) {
+@media (max-width: 480px) {
+
+    #aircooles-logo{
+        text-align: center;
+        margin-right: 2rem;
+        width: 242.2px;
+        height: 36.75px;
+    }
+
     *{
-        overflow: hidden;
+        overflow-x: hidden;
         overflow-y: scroll;
     }
     .services-available{
@@ -164,12 +199,17 @@ td{
         margin-bottom: .5rem;
     }
 
-    #myInput{
+    #submitButton{
+        width: 10rem;
+        height: 2rem;
+        font-size: .8rem;
+    }
+
+    #myInput, #clientNameInput, #clientBillInput, #clientAddressInput, #clientNumberInput{
         width: auto;
         height: .5rem;
         padding: .75rem;
         font-size: .8rem;
-        
     }
 
     .services-available label{
@@ -180,6 +220,10 @@ td{
         height: 25rem;
         width: 18rem;
         
+    }
+
+    .client-details label{
+        font-size: 1rem;
     }
 
     .client-table th{
@@ -207,5 +251,87 @@ td{
     .searchClient h1{
         color: #fb6b2f;
         font-size: 3rem;
+    }
+}
+
+@media (max-width: 380px) {
+
+    #aircooles-logo{
+        text-align: center;
+        margin-right: 3rem;
+        width: 207.6px;
+        height: 31.5px;
+    }
+
+    *{
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    .services-available{
+        flex-direction: column;
+        width: 25rem;
+    }
+
+    .client-base{
+        border-radius: 2rem;
+    }
+
+    #tableName{
+        font-size: 1.25rem;
+        margin-top: -.5rem;
+        margin-bottom: .5rem;
+    }
+
+    #submitButton{
+        width: 10rem;
+        height: 2rem;
+        font-size: .7rem;
+    }
+
+    #clientNameInput, #clientBillInput, #clientAddressInput, #clientNumberInput{
+        width: auto;
+        height: .3rem;
+        padding: .75rem;
+        font-size: .7rem;
+    }
+
+    .services-available label{
+        font-size: 1rem;
+    }
+
+    .client-table{
+        height: 20rem;
+        width: 15rem;
+        
+    }
+
+    .client-table th{
+        font-size: .75rem;
+    }
+
+    .client-table td{
+        font-size: .5rem;
+    }
+    
+    .client-table th, .client-table td{
+        text-align: justify;
+    }
+
+
+    .services-checkbox{
+        flex-direction: column;
+    }
+
+    .searchClient h1{
+        color: #fb6b2f;
+        font-size: 2rem;
+    }
+
+    label{
+        font-size: .75rem;
+    }
+
+    .checkboxes1 label, .checkboxes2 label{
+        font-size: .75rem;
     }
 }

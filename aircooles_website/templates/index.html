@@ -6,21 +6,23 @@
         <form action="/getDetails" method="post">
             <div class="client-details">
                 <label for="clientBill">Client Name</label>
-                <input type="text" name="clientName" for="clientName" id="clientName" placeholder="Input client name">
+                <input type="text" name="clientName" for="clientName" id="clientNameInput" placeholder="Input client name">
+                <label for="clientNumber">Client Phone Number</label>
+                <input type="text" name="clientNumber" for="clientNumber" id="clientNumberInput" placeholder="Input phone number">
                 <label for="clientBill">Client's Bill</label>
-                <input type="text" name="clientBill" for="clientBill" id="clientBill" placeholder="Input bill">
-                <label for="clientBill">Client Address (Example Format: Blk 14 Lot 8, Brgy. Salawag, Dasmariñas, Cavite)</label>
-                <input type="text" name="clientAddress" for="clientAddress" id="clientAddress" placeholder="Input client Address">
+                <input type="text" name="clientBill" for="clientBill" id="clientBillInput" placeholder="Input bill">
+                <label for="clientBill">Address</label>
+                <input type="text" name="clientAddress" for="clientAddress" id="clientAddressInput" placeholder="Input client Address">
             </div>
 
             <div class="services-available">
                 <div class="services-label">
-                    <label for="clientService">Services Availed</label>
+                    <label for="clientService"><strong>Services Availed by the Client</strong></label>
                 </div>
-
+    
                 <div class="services-checkbox">
                     <div class="checkboxes1">
-                        <label><input type="checkbox" name="cleaning" value="Availed">Aircon Cleaning</label>
+                        <label><input type="checkbox" name="cleaning" value="Availed">Cleaning</label>
                         <label><input type="checkbox" name="check-up" value="Availed">Check-up</label>
                         <label><input type="checkbox" name="dismantle" value="Availed">Dismantle</label>
                     </div>
@@ -32,7 +34,7 @@
                 </div>
             </div>
 
-            <input type="submit" value="Register Client">
+            <input id="submitButton" type="submit" value="Register Client">
         </form>
         
         <div class="client-base">
