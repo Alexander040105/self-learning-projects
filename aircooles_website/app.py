@@ -26,12 +26,16 @@ sheet1 = workbook.worksheet("Sheet1")
 app = Flask(__name__)
 
 
-@app.route('/', methods=['GET'])
-def index():
+@app.route('/clients', methods=['GET'])
+def showClients():
     cell_display = sheet1.get_all_values()
     cellList = list(cell_display)
     # return render_template("index.html", billList=billList, nameList=nameList, headers=headers)
-    return render_template("index.html", cellList=cellList)
+    return render_template("client-table.html", cellList=cellList)
+
+@app.route('/')
+def index():
+    return render_template("index.html")
 
 @app.route("/getDetails", methods=['POST', 'GET'])
 def getDetails():

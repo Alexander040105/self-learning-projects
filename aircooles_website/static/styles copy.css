@@ -9,11 +9,15 @@
     background-color: #fb6b2f;
 }
 
+.nav-link {
+    font-size: 1.5rem;
+    margin-left: -2rem; 
+    margin-right: 3rem;
+    color: #f2f2f2;
+}
 #aircooles-logo{
     height: 52.5px;
     width: 346px;
-    margin-left: 6rem;
-    margin-bottom: 1rem;
 }
 
 form{
@@ -68,15 +72,8 @@ form{
     background-color: #f2f2f2;
 }
 
-.client-base{
-    background-color: #f2f2f2;
-    height: auto;
-    width: auto;
-}
-
 .client-table{
     height: 30rem;
-    width: 100%;
     overflow: auto;
     object-fit: cover;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
@@ -161,10 +158,8 @@ td{
 
 
 .client-base{
-    margin-top: 1rem;
     padding: 1rem;
     border-radius: 1.5rem;
-    /* background-color: rgb(113, 113, 113); */
     display: flex;
     align-items: center;
     justify-content: center;

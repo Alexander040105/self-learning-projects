@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.nav-link {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-left: -2rem; 
+    margin-right: 3rem;
+    color: #f2f2f2;
+}
+
+.nav-link:hover{
+    font-weight: 500;
+}
+
+#aircooles-logo{
+    height: 52.5px;
+    width: 346px;
+}
+
+.contents{
+    margin: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form{
+    background-color: #f56b3a;
+    width: 50rem;
+    height: 48rem;
+    border-radius: 5rem;
+}
+
+form, .client-details, .services-available{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.checkboxes1, .checkboxes2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-checkbox{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    width: 31rem;
+}
+
+
+.services-checkbox label, .services-checkbox input{
+    margin: .30rem;
+    text-align: center;
+}
+
+.client-details label, .services-label label{
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #f2f2f2;
+    text-align: left;
+    width: 30rem;
+}
+/* 
+.client-details label{
+    
+} */
+
+.services-checkbox label{
+    font-size: 1.25rem;
+    color: #f2f2f2;
+}
+
+
+#submitButton{
+    margin-top: 1rem;
+    width: 30rem;
+    height: 3rem;
+    font-size: 1.25rem;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+#myInput, #clientNameInput, #clientNumberInput, #clientBillInput, #clientAddressInput{
+    width: 30rem;
+    height: 2.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px   solid #fb6b2f;
+    /* background-color: #f2f2f2; */
+}
+
+#submitButton:hover{
+    color: #f2f2f2;
+    border: 2px solid #f2f2f2;
+    background-color: #fb6b2f;
+}

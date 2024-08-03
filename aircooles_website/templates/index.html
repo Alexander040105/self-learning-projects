@@ -7,8 +7,8 @@
         </a>
     </nav> #}
 
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fb6b2f;>
-        <a class="navbar-brand" href="#">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #fb6b2f;">
+        <a class="navbar-brand " href="/">
             <img id="aircooles-logo" src="{{ url_for('static', filename='/aircooles-white.png') }}" class="d-inline-block align-top" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,10 +18,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent" >
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link display-6" href="#">Client List</span></a>
+                    <a class="nav-link display-6" href="/clients">Client List</span></a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link display-6" href="#">Analytics</a>
                 </li>
 
@@ -47,7 +47,7 @@
 
             <div class="services-available">
                 <div class="services-label">
-                    <label for="clientService"><strong>Services Availed by the Client</strong></label>
+                    <label for="clientService">Services availed by the client</label>
                 </div>
     
                 <div class="services-checkbox">
@@ -67,32 +67,6 @@
             <input id="submitButton" type="submit" value="Register Client">
         </form>
         
-        <div class="client-base">
-            <div class="searchClient">
-                <h1 id="tableName">Client Table</h1>
-                <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for client">
-            </div>
-
-            <div class="client-table">            
-                <table id="myTable">
-                    <!-- Iterate over headers to display column names -->
-                    <tr class="headers">
-                        {% for header in cellList[0] %}
-                            <th>{{ header }}</th>
-                        {% endfor %}
-                    </tr>
-
-                    <!-- Iterate over the rows in cellList -->
-                    {% for row in cellList[1:] %}
-                        <tr>
-                            {% for cell in row %}
-                                <td>{{ cell }}</td>
-                            {% endfor %}
-                        </tr>
-                    {% endfor %}
-                </table>
-            </div>
-        </div>
     </div>
 
 
