@@ -2,6 +2,9 @@ from flask import Flask, render_template, redirect, request
 import requests
 import csv
 import gspread
+import pandas as pd
+import plotly.express as px
+import plotly.io as pio
 import os.path
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
@@ -25,6 +28,87 @@ sheet1 = workbook.worksheet("Sheet1")
 
 app = Flask(__name__)
 
+def process_plot():
+    dataframe = pd.DataFrame(sheet1.get_all_records())
+
+    # Convert the 'Entry Date' column to datetime format
+    dataframe['Entry Date'] = pd.to_datetime(dataframe['Entry Date'], format='%m/ %d/ %Y %H:%M:%S')
+
+
+    current_date = datetime.datetime.now()
+    current_month = current_date.month
+    current_year = current_date.year
+    current_month_fullname = current_date.strftime('%B')
+
+    filtered_dataframe = dataframe[
+        (dataframe['Entry Date'].dt.month == current_month) & 
+        (dataframe['Entry Date'].dt.year == current_year)
+    ]
+
+
+    services_from_spreadsheet = {
+        'cleaning': filtered_dataframe['Cleaning'],
+        'check-up': filtered_dataframe['Check-up'],
+        'dismantle': filtered_dataframe['Dismantle'],
+        'relocation': filtered_dataframe['Relocation'],
+        'installation': filtered_dataframe['Installation']
+    }
+
+
+    services_availed = {
+        'cleaning': 0,
+        'check-up': 0,
+        'dismantle': 0,
+        'relocation': 0,
+        'installation': 0
+    }
+
+    servicesNames = []
+    numberAvailed = []
+
+    for customers in services_from_spreadsheet['cleaning']:
+        if 'Availed' in customers:
+            services_availed['cleaning'] += 1
+            
+    for customers in services_from_spreadsheet['check-up']:
+        if 'Availed' in customers:
+            services_availed['check-up'] += 1
+            
+    for customers in services_from_spreadsheet['dismantle']:
+        if 'Availed' in customers:
+            services_availed['dismantle'] += 1
+            
+    for customers in services_from_spreadsheet['relocation']:
+        if 'Availed' in customers:
+            services_availed['relocation'] += 1
+            
+    for customers in services_from_spreadsheet['installation']:
+        if 'Availed' in customers:
+            services_availed['installation'] += 1
+            
+    for keys in services_availed:
+        servicesNames.append(keys.upper())
+        numberAvailed.append(services_availed[keys])
+        
+    print(servicesNames)
+    print(numberAvailed)
+    servicesDataFrame = {'Names': servicesNames, 'Number of Availed': numberAvailed}
+    finalDataFrame = pd.DataFrame(servicesDataFrame)
+
+
+
+    fig = px.bar(
+        finalDataFrame,
+        x='Names',
+        y='Number of Availed',
+        title=f'Number of Availed Services for the Month of {current_month_fullname}',
+        labels={'Names': 'Service Type', 'Number of Availed': 'Number of Times Availed'},
+        color='Names'
+    )
+    
+    plot_json = pio.to_json(fig)
+    
+    return plot_json
 
 @app.route('/clients', methods=['GET'])
 def showClients():
@@ -36,6 +120,12 @@ def showClients():
 @app.route('/')
 def index():
     return render_template("index.html")
+
+
+@app.route('/analytics', methods=['GET'])
+def plots():
+    plot_json = process_plot()
+    return render_template("analytics.html", plot_json=plot_json)
 
 @app.route("/getDetails", methods=['POST', 'GET'])
 def getDetails():

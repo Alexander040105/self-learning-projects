@@ -9,15 +9,20 @@
     background-color: #fb6b2f;
 }
 
-.nav-link {
+.nav-link{
     font-size: 1.5rem;
-    margin-left: -2rem; 
+    margin-left: -1rem; 
     margin-right: 3rem;
     color: #f2f2f2;
 }
 #aircooles-logo{
     height: 52.5px;
     width: 346px;
+}
+
+.navbar .custom-navbar,
+.custom-navbar .navbar-collapse {
+    background-color: #fb6b2f; /* Your custom color */
 }
 
 form{

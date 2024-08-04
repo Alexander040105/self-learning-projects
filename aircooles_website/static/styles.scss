@@ -1,0 +1,20 @@
+$prefix: "my-";
+$navbar-dark-color: #fb6b2f;
+$navbar-dark-hover-color: #444;
+$navbar-dark-disabled-color: #555;
+$navbar-dark-active-color: #666;
+$navbar-dark-brand-color: #777;
+$navbar-dark-brand-hover-color: #888;
+$navbar-dark-toggler-border-color: #999;
+$navbar-dark-toggler-icon-bg: #aaa;
+
+:root {
+    --#{$prefix}navbar-color: #{$navbar-dark-color};
+    --#{$prefix}navbar-hover-color: #{$navbar-dark-hover-color};
+    --#{$prefix}navbar-disabled-color: #{$navbar-dark-disabled-color};
+    --#{$prefix}navbar-active-color: #{$navbar-dark-active-color};
+    --#{$prefix}navbar-brand-color: #{$navbar-dark-brand-color};
+    --#{$prefix}navbar-brand-hover-color: #{$navbar-dark-brand-hover-color};
+    --#{$prefix}navbar-toggler-border-color: #{$navbar-dark-toggler-border-color};
+}
+
